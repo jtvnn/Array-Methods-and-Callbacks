@@ -85,10 +85,10 @@ hint: the strings returned need to exactly match the string in step 4.
 function getWinnersByYear(array, getYearsCB, getWinnersCB) {
     const years = getYearsCB(array);
     const winners = getWinnersCB(array);
-    const winnersYear = [];
+    const winnersYears = [];
 
     for (let i=0; i<winners.length; i++){
-        winnersYears.push('In ${years[i]}, ${winners[i]} won the world cup!');
+        winnersYears.push(`In ${years[i]}, ${winners[i]} won the world cup!`);
     }
     return winnersYears;
 }
