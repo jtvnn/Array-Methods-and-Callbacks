@@ -57,12 +57,16 @@ Use the higher-order function getWinners to do the following:
 
 
 function getWinners(array, getFinalsCB) {
-    const winner = [];
-    const result = getFinalsCB(array);
-    
+    const finalsArray = getFinalsCB(array);
 
-    }
-    
+    const winners = finalsArray.map(function(item) {
+        if(item["Away Team Goals"] > item["Home Team Goals"]) {
+            return item["Away Team Name"]
+        } else {
+            return item["Home Team Name"];
+        }
+    })
+    return winners;
 }
 
 
